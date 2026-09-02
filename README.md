@@ -1,2 +1,34 @@
-Thaer Media website — GitHub Pages build.
-Brand direction: premium dark glassmorphism, deep green/gold/navy, Expo Arabic + Manrope, bilingual AR/EN.
+# Thaer Media CMS
+
+نسخة أولية كاملة قابلة للتشغيل لموقع Thaer Media مع لوحة تحكم وقاعدة بيانات SQLite.
+
+## التشغيل
+1. ثبّت Node.js 18+.
+2. افتح مجلد المشروع.
+3. نفّذ:
+   npm install
+4. انسخ `.env.example` إلى `.env` وعدّل بيانات المدير.
+5. شغّل:
+   npm start
+6. الموقع: `http://localhost:3000`
+7. لوحة التحكم: `http://localhost:3000/admin`
+
+## الافتراضي
+username: admin
+password: admin123
+
+غيّر كلمة المرور قبل الرفع للاستضافة.
+
+## ما يمكن إدارته
+- الألوان Light/Dark/System
+- الشعار
+- النصوص الأساسية
+- الخدمات
+- الأعمال والصور والروابط
+- الصفحات الجانبية
+- روابط السوشيال ميديا
+- بيانات الاتصال
+- المحتوى العربي والإنجليزي
+
+## النشر
+المشروع Node.js + Express + SQLite، ويمكن تشغيله على VPS أو استضافة تدعم Node.js. قبل النشر استخدم HTTPS، كلمة مرور قوية، وSESSION_SECRET عشوائي.
