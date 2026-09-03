@@ -73,7 +73,7 @@ function ensure_schema(): void {
     db()->prepare("INSERT INTO admins(username,password_hash) VALUES('admin',?) ON DUPLICATE KEY UPDATE username=username")->execute([$hash]);
     $defaults = [
         'siteName'=>'Thaer Media','layout'=>'classic','menuPosition'=>'top','sidebarEnabled'=>'0','mode'=>'system',
-        'primary'=>'#111111','accent'=>'#c7a86b','lightBg'=>'#f6f5f2','darkBg'=>'#0c0c0c','lightText'=>'#151515','darkText'=>'#f5f5f5',
+        'primary'=>'#0f4a46','accent'=>'#e2b960','lightBg'=>'#f5f5f2','darkBg'=>'#061d25','lightText'=>'#163b38','darkText'=>'#f5f5f2','green'=>'#0f4a46','green2'=>'#092f32','navy'=>'#09204e','gold'=>'#e2b960','white'=>'#f5f5f2','muted'=>'#b9c7c5','fontFamily'=>'Expo Arabic','fontColor'=>'#f5f5f2',
         'logo'=>'','favicon'=>'','phone'=>'+970 599 351 383','whatsapp'=>'970599351383','email'=>'thaeralqrenawi@gmail.com',
         'heroBadge_ar'=>'✦ وكالة إبداعية وتسويقية متكاملة','heroBadge_en'=>'✦ Integrated Creative & Marketing Agency',
         'heroTitle_ar'=>'نوظِّفُ خبرتنا لنجاح علامتك التجارية','heroTitle_en'=>'We turn experience into brand success',
