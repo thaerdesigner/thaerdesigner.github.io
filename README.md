@@ -1,16 +1,11 @@
-# Thaer Media — PHP/MySQL Final
+Thaer Media — local final candidate
 
-## تشغيل على XAMPP / Apache 2.4 / PHP 8.2+
-1. انسخ مجلد `thaer` إلى `C:\xampp\htdocs\thaer`.
-2. شغّل Apache وMySQL.
-3. افتح `http://localhost/thaer/`.
-4. لوحة التحكم: `http://localhost/thaer/admin/login.php`.
-5. الدخول الافتراضي: `admin` / `password`.
+This version preserves the original glass service-card UI while updating it to the six agreed services and adds a separate visual-services showcase using the prepared AR/EN assets.
 
-قاعدة البيانات تُنشأ وتُصلح تلقائيًا عند أول تشغيل. لا تحذف قاعدة البيانات القديمة؛ النظام يضيف الأعمدة الناقصة ويحافظ على البيانات.
+Files:
+- index.html
+- style.css
+- script.js
+- assets/
 
-## رفع الصور
-من لوحة التحكم > الأعمال والصور أو الخدمات أو مدير الملفات، اختر الملف من الجهاز. لا تحتاج إلى إدخال رابط للصورة.
-
-## إذا كان MySQL يستخدم كلمة مرور
-عدّل `DB_PASS` في `config/config.php`.
+Do not upload to GitHub until final visual review.
