@@ -1,16 +1,25 @@
 <?php
 declare(strict_types=1);
 
-const DB_HOST = '127.0.0.1';
-const DB_NAME = 'thaer_media';
-const DB_USER = 'root';
-const DB_PASS = '';
+const DB_HOST = ''; // Set your MySQL host here, or use THAER_DB_HOST environment variable
+const DB_NAME = ''; // Set your database name here, or use THAER_DB_NAME
+const DB_USER = ''; // Set your database username here, or use THAER_DB_USER
+const DB_PASS = ''; // Set your database password here, or use THAER_DB_PASS
+
+function db_config(string $key, string $fallback): string {
+    $env = getenv('THAER_DB_' . strtoupper($key));
+    return ($env !== false && $env !== '') ? $env : $fallback;
+}
 
 function db(): PDO {
     static $pdo = null;
     if ($pdo instanceof PDO) return $pdo;
-    $dsn = 'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4';
-    $pdo = new PDO($dsn, DB_USER, DB_PASS, [
+    $host = db_config('host', DB_HOST ?: '127.0.0.1');
+    $name = db_config('name', DB_NAME ?: 'thaer_media');
+    $user = db_config('user', DB_USER ?: 'root');
+    $pass = db_config('pass', DB_PASS);
+    $dsn = 'mysql:host=' . $host . ';dbname=' . $name . ';charset=utf8mb4';
+    $pdo = new PDO($dsn, $user, $pass, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         PDO::ATTR_EMULATE_PREPARES => false,
